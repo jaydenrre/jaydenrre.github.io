@@ -1,0 +1,115 @@
+/* Style for our header texts
+	* --------------------------------------- */
+
+@font-face {
+	font-family: Simplifica;
+	src: url(assets/SIMPLIFICA Typeface.ttf);
+	font-family: StMarie;
+	src: url(assets/StMarie-Thin.otf);
+}
+
+h1 {
+	font-size: 2em;
+	color: #333;
+	font-family: simplifica;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+img {
+	margin: auto;
+	display: block;
+	max-width: 70vw;
+	max-height: 80vh;
+}
+
+video {
+	display: block;
+	margin: auto;
+	height: auto;
+	width: auto;
+	max-width: 70vw;
+	max-height: 80vh;
+}
+
+
+/* Fixed header and footer.
+	* --------------------------------------- */
+
+#header {
+	position: fixed;
+	height: 60px;
+	display: block;
+	width: 100vw;
+	z-index: 9;
+	text-align: center;
+	padding-top: 1.5vh
+}
+
+#header div {
+	padding-left: 1vw;
+	padding-right: 1vw;
+	display: inline-block;
+	vertical-align: middle;
+	font-family: StMarie;
+}
+
+div.inSlide {
+	text-align: center;
+	margin-top: 70px;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 70vw;
+}
+
+div.inSlide div{
+	display: inline-block;
+	color: #000;
+	padding: 1vw;
+
+	font-family: StMarie;
+	vertical-align: middle;
+}
+
+div.text{
+	max-width: 700px;
+}
+
+div.text p{
+	text-align: justify;
+	font-family: StMarie;
+	text-indent: 2.5vw;
+}
+
+.fp-controlArrow.fp-prev {
+	left:0;
+	border: none;
+	width: 5vw;
+	height: 5vw;
+	background: url(assets/leftArrow.svg);
+	cursor: pointer;
+}
+
+.fp-controlArrow.fp-next {
+	right: 0;
+	border: none;
+	width: 5vw;
+	height: 5vw;
+	background: url(assets/rightArrow.svg);
+	cursor: pointer;
+}
+
+a:visited,
+a:link {
+	color: #000;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #ffa700;
+}
+
+a.current {
+	color: #ffa700;
+}
