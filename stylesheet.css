@@ -1,16 +1,30 @@
 /* Style for our header texts
 	* --------------------------------------- */
 
+
 @font-face {
 	font-family: Simplifica;
-	src: url(assets/SIMPLIFICA Typeface.ttf);
+	src: url('assets/Simplifica.eot');
+	src: url('assets/Simplifica.eot?#iefix') format('embedded-opentype'),
+		url('assets/Simplifica.woff') format('woff'),
+		url('assets/Simplifica.ttf') format('truetype'),
+		url('assets/Simplifica.svg#Simplifica') format('svg');
+	font-weight: normal;
+	font-style: normal;
+
 	font-family: StMarie;
-	src: url(assets/StMarie-Thin.otf);
+	src: url('assets/StMarie-Thin.eot');
+	src: url('assets/StMarie-Thin.eot?#iefix') format('embedded-opentype'),
+		url('assets/StMarie-Thin.woff') format('woff'),
+		url('assets/StMarie-Thin.ttf') format('truetype'),
+		url('assets/StMarie-Thin.svg#StMarie-Thin') format('svg');
+	font-weight: normal;
+	font-style: normal;
 }
 
 h1 {
 	font-size: 2em;
-	color: #333;
+	color: #666;
 	font-family: simplifica;
 	margin: 0;
 	padding: 0;
@@ -41,10 +55,13 @@ video {
 	position: fixed;
 	height: 60px;
 	display: block;
-	width: 100vw;
+	width: 80vw;
 	z-index: 9;
 	text-align: center;
-	padding-top: 1.5vh
+	padding-top: 1.5vh;
+	margin-left: 10vw;
+	margin-right: 10vw;
+	
 }
 
 #header div {
@@ -100,6 +117,11 @@ div.text p{
 	cursor: pointer;
 }
 
+.fullPage-tooltip {
+	color: black;
+	cursor: pointer;
+}
+
 a:visited,
 a:link {
 	color: #000;
@@ -112,4 +134,5 @@ a:hover {
 
 a.current {
 	color: #ffa700;
+	text-shadow: 0 0 1px #dddddd;
 }
