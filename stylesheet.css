@@ -3,16 +3,17 @@
 
 
 @font-face {
-	font-family: Simplifica;
+	font-family: 'Simplifica';
 	src: url('assets/Simplifica.eot');
 	src: url('assets/Simplifica.eot?#iefix') format('embedded-opentype'),
 		url('assets/Simplifica.woff') format('woff'),
 		url('assets/Simplifica.ttf') format('truetype'),
+		url('assets/Simplifica.otf') format('opentype'),
 		url('assets/Simplifica.svg#Simplifica') format('svg');
 	font-weight: normal;
 	font-style: normal;
 
-	font-family: StMarie;
+	font-family: 'StMarie';
 	src: url('assets/StMarie-Thin.eot');
 	src: url('assets/StMarie-Thin.eot?#iefix') format('embedded-opentype'),
 		url('assets/StMarie-Thin.woff') format('woff'),
@@ -49,10 +50,10 @@ video {
 iframe {
 	display: block;
 	margin: auto;
-	height: auto;
-	width: auto;
-	/*max-width: 70vw;
-	max-height: 80vh;*/
+	/*height: auto;
+	width: auto;*/
+	max-width: 70vw;
+	max-height: 80vh;
 }
 
 
@@ -61,7 +62,7 @@ iframe {
 
 #header {
 	position: fixed;
-	height: 60px;
+	height: 70spx;
 	display: block;
 	width: 80vw;
 	z-index: 9;
@@ -69,7 +70,7 @@ iframe {
 	padding-top: 1.5vh;
 	margin-left: 10vw;
 	margin-right: 10vw;
-	
+
 }
 
 #header div {
@@ -141,6 +142,10 @@ a:hover {
 }
 
 a.current {
-	color: #ffa700;
+	/*color: #ffa700;*/
+	color: black;
 	text-shadow: 0 0 1px #dddddd;
 }
+
+/* Style for our header texts
+	* --------------------------------------- */

@@ -11,402 +11,304 @@
 	<script type="text/javascript" src="JS/scrolloverflow.js"></script>
 	<script type="text/javascript" src="JS/jquery.fullPage.js"></script>
 	<script type="text/javascript">
-		$(document).ready(function () {
+		$(document).ready(function() {
 			$('#fullpage').fullpage({
-				//anchors: ['firstPage', 'secondPage', '3rdPage'],
+
+				anchors: ['section0', 'section1', 'section2', 'section3', 'section4'],
 				sectionsColor: ['#f1f1f2', '#f1f1f2', '#f1f1f2', '#f1f1f2', '#f1f1f2'],
-				//css3: true,
+
 				continuousVertical: false,
-				//fitToSection:false,
-				scrollOverflow:true,
-//				navigation: true,
-//				navigationPosition: 'left'
+
+				scrollOverflow: true,
+
+
 			});
 		});
+
+// 		$('#fullpage').fullpage({
+//     onLeave: function(index, nextIndex, direction){
+//     var idx = Math.abs(index - nextIndex)*10;
+//     $.fn.fullpage.setScrollingSpeed(idx*700);
+//     }
+// })
 	</script>
 </head>
 
 <body>
 	<div id="header" style="background: #f1f1f2">
-		<h1> A L P R O L A  </h1>
+		<!-- <h1 > A  L  P  R  O  L  A  </h1> -->
+		<h1> <img src="assets\alprola.svg" style="width:150px;height:45px;"/></h1>
 		<!--		<div> machines </div>-->
-		
-			<div><a href="work.html" class="current"> Conflagrations </a> </div>
-<!--			<div> info  </div>-->
-		</div>
+
+		<div><a href="#section0"> conflagrations </a> </div>
+		<div><a href="#section3"> kinetic sculptures </a> </div>
+		<!--			<div> info  </div>-->
+	</div>
 	<div id="fullpage">
-		<div class="section" id="section0">
+		<div class="section">
+			<div class="slide" id="slide1">
+				<div class="marginDiv">
+					<iframe src="https://player.vimeo.com/video/203734627?byline=0&portrait=0" width="960" height="540" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+				</div>
+			</div>
+
+		</div>
+		<div class="section">
 			<div class="slide" id="slide1">
 				<div class="inSlide"> <img src="images\Progreso.jpg" id="img" />
 					<div> Progress </div>
-<!--
-					<div> | </div>
-					<div>combustion on cotton paper</div>
--->
+
 				</div>
 			</div>
 
 			<div class="slide">
 				<div class="inSlide"> <img src="images\Concesion.jpg" />
 					<div>Concesion</div>
-<!--
-					<div> | </div>
-					<div>combustion ???????? on cotton paper</div>
--->
-				</div>
-			</div>
-			
 
-                <div class="slide">
-					<div class="inSlide">
-						<img src="images\Contencion_y_Contraste.jpg" />
-						<div>Contencion Y Contraste</div> 
-<!--
-						<div> | </div>
-						<div>combustion ???????? on cotton paper</
--->
-					</div>
 				</div>
-        
-                <div class="slide">
-					<div class="inSlide">
-						<img src="images\Ejercicio_en_Negro_Autonomo_n6.jpg" />
-						<div>Ejercicio En Negro Autonomo N6</div> 
-<!--
-						<div> | </div>
-						<div>combustion ???????? on cotton paper</
--->
-					</div>
-				</div>
-        
-                <div class="slide">
-					<div class="inSlide">
-						<img src="images\Reconstituido_n1.jpg" />
-						<div>Reconstituido N1</div> 
-<!--
-						<div> | </div>
-						<div>combustion ???????? on cotton paper</
--->
-					</div>
-				</div>
-        
-                <div class="slide">
-					<div class="inSlide">
-						<img src="images\Aseguramiento.jpg" />
-						<div>Aseguramiento</div> 
-<!--
-						<div> | </div>
-						<div>combustion ???????? on cotton paper</
--->
-					</div>
-				</div>
-        
-                <div class="slide">
-					<div class="inSlide">
-						<img src="images\Reiteracion_de_Reconstitucion_n2.jpg" />
-						<div>Reiteracion De Reconstitucion N2</div> 
-<!--
-						<div> | </div>
-						<div>combustion ???????? on cotton paper</
--->
-					</div>
-				</div>
-               
-                <div class="slide">
-					<div class="inSlide">
-						<img src="images\Ejercisio_Fotonico_n24.jpg" />
-						<div>Ejercisio Fotonico N24</div> 
-<!--
-						<div> | </div>
-						<div>combustion ???????? on cotton paper</
--->
-					</div>
-				</div>
-        
-                <div class="slide">
-					<div class="inSlide">
-						<img src="images\Negro_Autonomo_n1.jpg" />
-						<div>Negro Autonomo N1</div> 
-<!--
-						<div> | </div>
-						<div>combustion ???????? on cotton paper</
--->
-					</div>
-				</div>
-        
-                <div class="slide">
-					<div class="inSlide">
-						<img src="images\Ejercicio_en_Reconstitucion.jpg" />
-						<div>Ejercicio En Reconstitucion</div> 
-<!--
-						<div> | </div>
-						<div>combustion ???????? on cotton paper</
--->
-					</div>
-				</div>
-        
-                <div class="slide">
-					<div class="inSlide">
-						<img src="images\Autonomia.jpg" />
-						<div>Autonomia</div> 
-<!--
-						<div> | </div>
-						<div>combustion ???????? on cotton paper</
--->
-					</div>
-				</div>
-        
-                <div class="slide">
-					<div class="inSlide">
-						<img src="images\Reconstituido_n2.jpg" />
-						<div>Reconstituido N2</div> 
-<!--
-						<div> | </div>
-						<div>combustion ???????? on cotton paper</
--->
-					</div>
-				</div>
-        
-                <div class="slide">
-					<div class="inSlide">
-						<img src="images\Ejercicio_Fotonico_n16.jpg" />
-						<div>Ejercicio Fotonico N16</div> 
-<!--
-						<div> | </div>
-						<div>combustion ???????? on cotton paper</
--->
-					</div>
-				</div>
-        
-                <div class="slide">
-					<div class="inSlide">
-						<img src="images\Experimento_Ferrico.jpg" />
-						<div>Experimento Ferrico</div> 
-<!--
-						<div> | </div>
-						<div>combustion ???????? on cotton paper</
--->
-					</div>
-				</div>
-        
-                <div class="slide">
-					<div class="inSlide">
-						<img src="images\Ejercicio_en_Humo_n3.jpg" />
-						<div>Ejercicio En Humo N3</div> 
-<!--
-						<div> | </div>
-						<div>combustion ???????? on cotton paper</
--->
-					</div>
-				</div>
-        
-                <div class="slide">
-					<div class="inSlide">
-						<img src="images\Realizacion.jpg" />
-						<div>Realizacion</div> 
-<!--
-						<div> | </div>
-						<div>combustion ???????? on cotton paper</
--->
-					</div>
-				</div>
-        
-                <div class="slide">
-					<div class="inSlide">
-						<img src="images\Implementacion_de_negro_autonomo_n9.jpg" />
-						<div>Implementacion De Negro Autonomo N9</div> 
-<!--
-						<div> | </div>
-						<div>combustion ???????? on cotton paper</
--->
-					</div>
-				</div>
-        
-                <div class="slide">
-					<div class="inSlide">
-						<img src="images\Reconstituido_n3.jpg" />
-						<div>Reconstituido N3</div> 
-<!--
-						<div> | </div>
-						<div>combustion ???????? on cotton paper</
--->
-					</div>
-				</div>
-        
-                <div class="slide">
-					<div class="inSlide">
-						<img src="images\Sensibilidad_Carbonica.jpg" />
-						<div>Sensibilidad Carbonica</div> 
-<!--
-						<div> | </div>
-						<div>combustion ???????? on cotton paper</
--->
-					</div>
-				</div>
+			</div>
 
-        
-                <div class="slide">
-					<div class="inSlide">
-						<img src="images\Reiteracion_de_Reconstitucion_n1.jpg" />
-						<div>Reiteracion De Reconstitucion N1</div> 
-<!--
-						<div> | </div>
-						<div>combustion ???????? on cotton paper</
--->
-					</div>
-				</div>
-        
-                <div class="slide">
-					<div class="inSlide">
-						<img src="images\Implementacion_de_Negro_Autonomo.jpg" />
-						<div>Implementacion De Negro Autonomo</div> 
-<!--
-						<div> | </div>
-						<div>combustion ???????? on cotton paper</
--->
-					</div>
-				</div>
-        
-                <div class="slide">
-					<div class="inSlide">
-						<img src="images\Regrecion_y_Confirmacion.jpg" />
-						<div>Regrecion Y Confirmacion</div> 
-<!--
-						<div> | </div>
-						<div>combustion ???????? on cotton paper</
--->
-					</div>
-				</div>
-        
-                <div class="slide">
-					<div class="inSlide">
-						<img src="images\Redencion_Fotonica.jpg" />
-						<div>Redencion Fotonica</div> 
-<!--
-						<div> | </div>
-						<div>combustion ???????? on cotton paper</
--->
-					</div>
-				</div>
-        
-                <div class="slide">
-					<div class="inSlide">
-						<img src="images\Comprension.jpg" />
-						<div>Comprension</div> 
-<!--
-						<div> | </div>
-						<div>combustion ???????? on cotton paper</
--->
-					</div>
-				</div>
-        
-                <div class="slide">
-					<div class="inSlide">
-						<img src="images\Reiteracion_de_Reconstitucion_n3.jpg" />
-						<div>Reiteracion De Reconstitucion N3</div> 
-<!--
-						<div> | </div>
-						<div>combustion ???????? on cotton paper</
--->
-					</div>
-				</div>
-        
-                <div class="slide">
-					<div class="inSlide">
-						<img src="images\Ejercicio_en_Negro_Autonomo_n3.jpg" />
-						<div>Ejercicio En Negro Autonomo N3</div> 
-<!--
-						<div> | </div>
-						<div>combustion ???????? on cotton paper</
--->
-					</div>
-				</div>
-        
-                <div class="slide">
-					<div class="inSlide">
-						<img src="images\Ejercicio_Votaico_n4.jpg" />
-						<div>Ejercicio Votaico N4</div> 
-<!--
-						<div> | </div>
-						<div>combustion ???????? on cotton paper</
--->
-					</div>
-				</div>
-        
-                <div class="slide">
-					<div class="inSlide">
-						<img src="images\Ejercicio_Voltaico_n8.jpg" />
-						<div>Ejercicio Voltaico N8</div> 
-<!--
-						<div> | </div>
-						<div>combustion ???????? on cotton paper</
--->
-					</div>
-				</div>
-        			<!--bookmark-->
-		</div>
-		<div class="section " id="section0">
-			<div class="slide" id="slide1">
-				<div class="marginDiv">
-					<video width="960" height="540" controls=True> 
-						<source src="https://dl.dropboxusercontent.com/u/42077145/Conflagraciones_tedDavis.mp4" type='video/mp4' /> 
-					</video>
+
+			<div class="slide">
+				<div class="inSlide">
+					<img src="images\Contencion_y_Contraste.jpg" />
+					<div>Contencion Y Contraste</div>
 				</div>
 			</div>
-			<div class="slide" id="slide1">
-				<div class="marginDiv">
-					<video width="960" height="540" controls=True> 
-						<source src="https://dl.dropboxusercontent.com/u/42077145/margolinesque.mp4" type='video/mp4' /> 
-					</video>
-				</div>
-			</div>			
-			<div class="slide" id="slide1">
-				<div class="marginDiv">
-					<video width="960" height="540" controls=True> 
-						<source src="https://dl.dropboxusercontent.com/u/42077145/sineAdder.mp4" type='video/mp4' /> 
-					</video>
-				</div>
-			</div>			
-			<div class="slide" id="slide1">
-				<div class="marginDiv">
-					<video width="960" height="540" controls=True> 
-						<source src="https://dl.dropboxusercontent.com/u/42077145/harmonograph.mp4" type='video/mp4' /> 
-					</video>
+
+			<div class="slide">
+				<div class="inSlide">
+					<img src="images\Ejercicio_en_Negro_Autonomo_n6.jpg" />
+					<div>Ejercicio En Negro Autonomo N6</div>
 				</div>
 			</div>
-			
-			
-			
+
+			<div class="slide">
+				<div class="inSlide">
+					<img src="images\Reconstituido_n1.jpg" />
+					<div>Reconstituido N1</div>
+				</div>
+			</div>
+
+			<div class="slide">
+				<div class="inSlide">
+					<img src="images\Aseguramiento.jpg" />
+					<div>Aseguramiento</div>
+				</div>
+			</div>
+
+			<div class="slide">
+				<div class="inSlide">
+					<img src="images\Reiteracion_de_Reconstitucion_n2.jpg" />
+					<div>Reiteracion De Reconstitucion N2</div>
+				</div>
+			</div>
+
+			<div class="slide">
+				<div class="inSlide">
+					<img src="images\Ejercisio_Fotonico_n24.jpg" />
+					<div>Ejercisio Fotonico N24</div>
+				</div>
+			</div>
+
+			<div class="slide">
+				<div class="inSlide">
+					<img src="images\Negro_Autonomo_n1.jpg" />
+					<div>Negro Autonomo N1</div>
+				</div>
+			</div>
+
+			<div class="slide">
+				<div class="inSlide">
+					<img src="images\Ejercicio_en_Reconstitucion.jpg" />
+					<div>Ejercicio En Reconstitucion</div>
+				</div>
+			</div>
+
+			<div class="slide">
+				<div class="inSlide">
+					<img src="images\Autonomia.jpg" />
+					<div>Autonomia</div>
+				</div>
+			</div>
+
+			<div class="slide">
+				<div class="inSlide">
+					<img src="images\Reconstituido_n2.jpg" />
+					<div>Reconstituido N2</div>
+				</div>
+			</div>
+
+			<div class="slide">
+				<div class="inSlide">
+					<img src="images\Ejercicio_Fotonico_n16.jpg" />
+					<div>Ejercicio Fotonico N16</div>
+				</div>
+			</div>
+
+			<div class="slide">
+				<div class="inSlide">
+					<img src="images\Experimento_Ferrico.jpg" />
+					<div>Experimento Ferrico</div>
+				</div>
+			</div>
+
+			<div class="slide">
+				<div class="inSlide">
+					<img src="images\Ejercicio_en_Humo_n3.jpg" />
+					<div>Ejercicio En Humo N3</div>
+				</div>
+			</div>
+
+			<div class="slide">
+				<div class="inSlide">
+					<img src="images\Realizacion.jpg" />
+					<div>Realizacion</div>
+				</div>
+			</div>
+
+			<div class="slide">
+				<div class="inSlide">
+					<img src="images\Implementacion_de_negro_autonomo_n9.jpg" />
+					<div>Implementacion De Negro Autonomo N9</div>
+				</div>
+			</div>
+
+			<div class="slide">
+				<div class="inSlide">
+					<img src="images\Reconstituido_n3.jpg" />
+					<div>Reconstituido N3</div>
+				</div>
+			</div>
+
+			<div class="slide">
+				<div class="inSlide">
+					<img src="images\Sensibilidad_Carbonica.jpg" />
+					<div>Sensibilidad Carbonica</div>
+				</div>
+			</div>
+
+
+			<div class="slide">
+				<div class="inSlide">
+					<img src="images\Reiteracion_de_Reconstitucion_n1.jpg" />
+					<div>Reiteracion De Reconstitucion N1</div>
+				</div>
+			</div>
+
+			<div class="slide">
+				<div class="inSlide">
+					<img src="images\Implementacion_de_Negro_Autonomo.jpg" />
+					<div>Implementacion De Negro Autonomo</div>
+				</div>
+			</div>
+
+			<div class="slide">
+				<div class="inSlide">
+					<img src="images\Regrecion_y_Confirmacion.jpg" />
+					<div>Regrecion Y Confirmacion</div>
+				</div>
+			</div>
+
+			<div class="slide">
+				<div class="inSlide">
+					<img src="images\Redencion_Fotonica.jpg" />
+					<div>Redencion Fotonica</div>
+				</div>
+			</div>
+
+			<div class="slide">
+				<div class="inSlide">
+					<img src="images\Comprension.jpg" />
+					<div>Comprension</div>
+				</div>
+			</div>
+
+			<div class="slide">
+				<div class="inSlide">
+					<img src="images\Reiteracion_de_Reconstitucion_n3.jpg" />
+					<div>Reiteracion De Reconstitucion N3</div>
+				</div>
+			</div>
+
+			<div class="slide">
+				<div class="inSlide">
+					<img src="images\Ejercicio_en_Negro_Autonomo_n3.jpg" />
+					<div>Ejercicio En Negro Autonomo N3</div>
+				</div>
+			</div>
+
+			<div class="slide">
+				<div class="inSlide">
+					<img src="images\Ejercicio_Votaico_n4.jpg" />
+					<div>Ejercicio Votaico N4</div>
+				</div>
+			</div>
+
+			<div class="slide">
+				<div class="inSlide">
+					<img src="images\Ejercicio_Voltaico_n8.jpg" />
+					<div>Ejercicio Voltaico N8</div>
+				</div>
+			</div>
+			<!--bookmark-->
 		</div>
-		<div class="section" id="section2">
+		<div class="section">
 			<div class="inSlide">
-				<div class="text" >
-				<h1 style="letter-spacing: 2px; margin-bottom: 5vh">Conflagrations </h1>
-					<p>The driving force behind my work began with heat, with the phenomenon of an ember slowly consuming the paper it traveled through. This drove my exploration to find different ways to manifest, control, and celebrate the nature of such elements. Heat led to fire, fire to electricity, electricity to light. Within these techniques, as well as the resulting pieces, certain properties manifest which reflect those of the modern world; properties repurposed and represented in a new form.
-					<p>I have focused on employing and celebrating the autonomy and reactivity of the materials I use. The generative nature of the techniques grants the work a degree of independence, as they are not solely created by my intent, but come into being as a collaboration between myself and the properties of the medium. Beyond that, the methods used grant my practice a certain independence from typical materials and established knowledge, which untethers the work from traditional approaches. 
-					<p>Turning to science and technology as sources of inspiration and for the development of techniques has been crucial to the work. Utilizing the potential energy of substances, the intricacies and subtleties present in the pieces can be created with a swiftness and elegance unobtainable by classical means. Furthermore, the immediacy and ever changing variables inherent in my practice permits for a rapid evolution, maintaining the work in constant flux; with every iteration refining, improving and occasionally fundamentally altering the procedures that create them.
-					<p>Through these processes, commonalities emerge with the modern world. The use of petroleum and electricity; the importance of immediacy and efficiency; a fixation on action and the energetic alongside the appreciation of the serene and elegant; the friction between the organic and spontaneous, and the synthetic and mechanical. Through the techniques employed these properties are harmonized and imbued in the work by transforming the materials from their hazardous energetic state into a stable memento of action.
+				<div class="text">
+					<h1 style="letter-spacing: 2px; margin-bottom: 5vh">CONFLAGRATIONS </h1>
+					<p>The driving force behind my work began with heat, with the phenomenon of an ember slowly consuming the paper it traveled through. This drove my exploration to find different ways to manifest, control, and celebrate the nature of such elements. Heat
+						led to fire, fire to electricity, electricity to light. Within these techniques, as well as the resulting pieces, certain properties manifest which reflect those of the modern world; properties repurposed and represented in a new form.</p>
+					<p>I have focused on employing and celebrating the autonomy and reactivity of the materials I use. The generative nature of the techniques grants the work a degree of independence, as they are not solely created by my intent, but come into being as
+						a collaboration between myself and the properties of the medium. Beyond that, the methods used grant my practice a certain independence from typical materials and established knowledge, which untethers the work from traditional approaches.</p>
+					<p>Turning to science and technology as sources of inspiration and for the development of techniques has been crucial to the work. Utilizing the potential energy of substances, the intricacies and subtleties present in the pieces can be created with
+						a swiftness and elegance unobtainable by classical means. Furthermore, the immediacy and ever changing variables inherent in my practice permits for a rapid evolution, maintaining the work in constant flux; with every iteration refining, improving
+						and occasionally fundamentally altering the procedures that create them.</p>
+					<p>Through these processes, commonalities emerge with the modern world. The use of petroleum and electricity; the importance of immediacy and efficiency; a fixation on action and the energetic alongside the appreciation of the serene and elegant; the
+						friction between the organic and spontaneous, and the synthetic and mechanical. Through the techniques employed these properties are harmonized and imbued in the work by transforming the materials from their hazardous energetic state into a stable
+						memento of action.</p>
 					<p style="text-align: right; font-size: 80%;">-jayden romay</p>
-					</div>
+				</div>
 			</div>
 		</div>
-		<div class="section" id="section3">
-			<div class="inSlide">
-				<div class="text" >
-				<h1 style="letter-spacing: 2px; margin-bottom: 5vh">Past Exhibits </h1>
-					<p>2015-16: Conflagraciones. Exhibit at the cultural center El Nigromante, INBA, San Migue de Allende Gto.
 
-<p>2014 : Border Crossings. Joint show, part of the Chicago Expo: 2014, curated by Margarita Failoni.
-<p>
-<p>2013 : Art department exhibit of the Austin Community College, Austin, Texas. Winner of "Best in Show" award.
-<p>
-<p>2010 : The Artists of San Miguel, Mexico On the Road. Joint show in various establishments, New Braunfels, Texas.
-<p>
-<p>2008 : Phoenix Rises. First solo show in the  Atelier gallery, Fábrica Aurora, San Migue de Allende Gto., curated by Margarita Failoni.
-<p>
-<p>2006 : Arte en Papel. Joint show in the Le Noir gallery, San Miguel de Allende.
-Invited by Peter Leventhal.</p>
-					</div>
+		<div class="section">
+
+			<div class="slide" id="slide1">
+				<div class="marginDiv">
+					<iframe src="https://player.vimeo.com/video/194909844?byline=0&portrait=0" width="960" height="540" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+				</div>
+			</div>
+			<div class="slide" id="slide1">
+				<div class="marginDiv">
+					<iframe src="https://player.vimeo.com/video/192050963?byline=0&portrait=0" width="960" height="540" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+				</div>
+			</div>
+			<div class="slide" id="slide1">
+				<div class="marginDiv">
+					<iframe src="https://player.vimeo.com/video/194909786?byline=0&portrait=0" width="960" height="540" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="section">
+			<div class="inSlide">
+				<div class="text">
+					<h1 style="letter-spacing: 2px; margin-bottom: 5vh">Past Exhibits </h1>
+					<p>2015-16: Conflagraciones. Exhibit at the cultural center El Nigromante, INBA, San Migue de Allende Gto.</p>
+					<p></p>
+					<p>2014 : Border Crossings. Joint show, part of the Chicago Expo: 2014, curated by Margarita Failoni.</p>
+					<p></p>
+					<p>2013 : Art department exhibit of the Austin Community College, Austin, Texas. Winner of "Best in Show" award.</p>
+					<p></p>
+					<p>2010 : The Artists of San Miguel, Mexico On the Road. Joint show in various establishments, New Braunfels, Texas.</p>
+					<p></p>
+					<p>2008 : Phoenix Rises. First solo show in the Atelier gallery, Fábrica Aurora, San Migue de Allende Gto., curated by Margarita Failoni.</p>
+					<p></p>
+					<p>2006 : Arte en Papel. Joint show in the Le Noir gallery, San Miguel de Allende. Invited by Peter Leventhal.</p>
+				</div>
 			</div>
 		</div>
 	</div>
