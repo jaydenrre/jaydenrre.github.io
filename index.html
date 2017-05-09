@@ -1,318 +1,653 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-	<title>alprola</title>
-	<link rel="shortcut icon" type="image/gif" href="assets/favicon.gif" />
-	<link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
-	<link rel="stylesheet" type="text/css" href="stylesheet.css" />
-	<script src="JS/jquery-1.8.3.min.js"></script>
-	<script src="JS/jquery-ui.min.js"></script>
-	<script type="text/javascript" src="JS/scrolloverflow.js"></script>
-	<script type="text/javascript" src="JS/jquery.fullPage.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function() {
-			$('#fullpage').fullpage({
-
-				anchors: ['section0', 'section1', 'section2', 'section3', 'section4'],
-				sectionsColor: ['#f1f1f2', '#f1f1f2', '#f1f1f2', '#f1f1f2', '#f1f1f2'],
-
-				continuousVertical: false,
-
-				scrollOverflow: true,
 
 
+<div id="main">
+
+	<head>
+		<title>alprola</title>
+
+		<meta charset="UTF-8">
+
+		<link rel='stylesheet prefetch' href='photoSwipe/css/photoswipe.min.css'>
+		<link rel='stylesheet prefetch' href='photoSwipe/css/default-skin.min.css'>
+
+		<link rel="shortcut icon" type="image/gif" href="assets/favicon.gif" />
+		<link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
+		<link rel="stylesheet" type="text/css" href="stylesheet.css" />
+		<script src="JS/jquery-1.8.3.min.js"></script>
+		<script src="JS/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="JS/scrolloverflow.js"></script>
+		<script type="text/javascript" src="JS/jquery.fullPage.js"></script>
+
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('#fullpage').fullpage({
+
+					anchors: ['section0', 'section1', 'section2', 'section3', 'section4', 'section5', 'section6', 'section7'],
+					// sectionsColor: ['#f1f1f2', '#f1f1f2', '#f1f1f2', '#f1f1f2', '#f1f1f2', '#f1f1f2', '#f1f1f2'],
+
+					continuousVertical: false,
+
+					scrollOverflow: true,
+
+					setAllowScrolling: true,
+
+
+				});
 			});
-		});
+		</script>
+	</head>
 
-// 		$('#fullpage').fullpage({
-//     onLeave: function(index, nextIndex, direction){
-//     var idx = Math.abs(index - nextIndex)*10;
-//     $.fn.fullpage.setScrollingSpeed(idx*700);
-//     }
-// })
-	</script>
-</head>
+	<body>
 
-<body>
-	<div id="header" style="background: #f1f1f2">
-		<!-- <h1 > A  L  P  R  O  L  A  </h1> -->
-		<h1> <img src="assets\alprola.svg" style="width:150px;height:45px;"/></h1>
-		<!--		<div> machines </div>-->
+		<div id="header">
 
-		<div><a href="#section0"> conflagrations </a> </div>
-		<div><a href="#section3"> kinetic sculptures </a> </div>
-		<!--			<div> info  </div>-->
-	</div>
-	<div id="fullpage">
-		<div class="section">
-			<div class="slide" id="slide1">
+
+			<span style="cursor:pointer;z-index: 10; " onclick="openNav()"> <img src="assets\menu.svg" style="width:60px;height:60px;"/> </span>
+			<!-- <h1> <img src="assets\alprola.svg" style="width:150px;height:45px;"/></h1>
+
+		<a href="#section1">
+			<div class="btn btn-one">
+				<span>conflagrations </span>
+			</div>
+		</a>
+
+		<a href="#section3">
+			<div class="btn btn-one">
+				<span>kinetics </span>
+			</div>
+		</a>
+
+		<a href="#section4">
+			<div class="btn btn-one">
+				<span>about </span>
+			</div>
+		</a> -->
+
+		</div>
+		<div id="mySidenav" class="sidenav">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+			<a href="#section0" onclick="closeNav()"><img src="assets\alprola.svg" style="width:200px;"/></a>
+
+			<a href="#section1" onclick="closeNav()">conflagrations</a>
+			<a href="#section3" onclick="closeNav()">kinetics</a>
+			<!-- <a href="#section4" onclick="closeNav()">fabrication</a> -->
+			<a href="#section4" onclick="closeNav()">about</a>
+			<a href="#section7" onclick="closeNav()">contact</a>
+
+		</div>
+
+		<script type="text/javascript">
+			/* Set the width of the side navigation to 250px */
+			function openNav() {
+				document.getElementById("mySidenav").style.width = "250px";
+			}
+
+			/* Set the width of the side navigation to 0 */
+			function closeNav() {
+				document.getElementById("mySidenav").style.width = "0";
+			}
+		</script>
+
+
+		<div id="fullpage">
+			<div class="section " style="z-index: 11;">
 				<div class="marginDiv">
-					<iframe src="https://player.vimeo.com/video/203734627?byline=0&portrait=0" width="960" height="540" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+					<video width="960" height="540" id="myVideo" loop muted data-autoplay>
+			<source src="video/backgroundVid.mp4" type="video/mp4" >
+			<!-- <source src="imgs/flowers.webm" type="video/webm"> -->
+		</video>
+					<div class="layer">
 
+					</div>
+				</div>
+			</div>
+
+			<div class="section">
+				<div class="slide" id="slide1">
+					<div class="marginDiv">
+						<iframe src="https://player.vimeo.com/video/203734627?byline=0&portrait=0" width="960" height="540" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+					</div>
+				</div>
+
+			</div>
+
+			<div class="section">
+				<div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+					<div class="slide">
+						<!-- <h1>fullPage.js videos</h1> -->
+
+
+						<figure class="find-them-all" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+							<a href="images\Progreso.jpg" itemprop="contentUrl" data-size="937x1000" data-index="0">
+								<img class="slideImg" src="images\Progreso.jpg" itemprop="thumbnail" />
+							</a>
+							<!-- <figcaption itemprop="caption description">Image caption  1</figcaption> -->
+
+
+					</div>
+
+					<div class="slide">
+						<!-- <h1>fullPage.js videos</h1> -->
+
+
+						<figure class="find-them-all" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+							<a href="images\Concesion.jpg" itemprop="contentUrl" data-size=" 609x1000 " data-index=" 1 ">
+								<img class="slideImg" src="images\Concesion.jpg" itemprop="thumbnail" alt="Image description" />
+							</a>
+							<!-- <figcaption itemprop="caption description">Image caption 2</figcaption> -->
+						</figure>
+
+					</div>
+
+					<div class="slide">
+						<!-- <h1>fullPage.js videos</h1> -->
+
+
+						<figure class="find-them-all" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+							<a href="images\Contencion_y_Contraste.jpg" itemprop="contentUrl" data-size=" 620x1000 " data-index=" 2 ">
+								<img class="slideImg" src="images\Contencion_y_Contraste.jpg" itemprop="thumbnail" alt="Image description" />
+							</a>
+							<!-- <figcaption itemprop="caption description">Image caption 2</figcaption> -->
+						</figure>
+
+					</div>
+
+					<div class="slide">
+						<!-- <h1>fullPage.js videos</h1> -->
+
+
+						<figure class="find-them-all" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+							<a href="images\Ejercicio_en_Negro_Autonomo_n6.jpg" itemprop="contentUrl" data-size=" 1322x1000 " data-index=" 3 ">
+								<img class="slideImg" src="images\Ejercicio_en_Negro_Autonomo_n6.jpg" itemprop="thumbnail" alt="Image description" />
+							</a>
+							<!-- <figcaption itemprop="caption description">Image caption 2</figcaption> -->
+						</figure>
+
+					</div>
+
+					<div class="slide">
+						<!-- <h1>fullPage.js videos</h1> -->
+
+
+						<figure class="find-them-all" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+							<a href="images\Reconstituido_n1.jpg" itemprop="contentUrl" data-size=" 992x1000 " data-index=" 4 ">
+								<img class="slideImg" src="images\Reconstituido_n1.jpg" itemprop="thumbnail" alt="Image description" />
+							</a>
+							<!-- <figcaption itemprop="caption description">Image caption 2</figcaption> -->
+						</figure>
+
+					</div>
+
+					<div class="slide">
+						<!-- <h1>fullPage.js videos</h1> -->
+
+
+						<figure class="find-them-all" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+							<a href="images\Aseguramiento.jpg" itemprop="contentUrl" data-size=" 751x1000 " data-index=" 5 ">
+								<img class="slideImg" src="images\Aseguramiento.jpg" itemprop="thumbnail" alt="Image description" />
+							</a>
+							<!-- <figcaption itemprop="caption description">Image caption 2</figcaption> -->
+						</figure>
+
+					</div>
+
+					<div class="slide">
+						<!-- <h1>fullPage.js videos</h1> -->
+
+
+						<figure class="find-them-all" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+							<a href="images\Reiteracion_de_Reconstitucion_n2.jpg" itemprop="contentUrl" data-size=" 1233x1000 " data-index=" 6 ">
+								<img class="slideImg" src="images\Reiteracion_de_Reconstitucion_n2.jpg" itemprop="thumbnail" alt="Image description" />
+							</a>
+							<!-- <figcaption itemprop="caption description">Image caption 2</figcaption> -->
+						</figure>
+
+					</div>
+
+					<div class="slide">
+						<!-- <h1>fullPage.js videos</h1> -->
+
+
+						<figure class="find-them-all" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+							<a href="images\Ejercisio_Fotonico_n24.jpg" itemprop="contentUrl" data-size=" 999x1000 " data-index=" 7 ">
+								<img class="slideImg" src="images\Ejercisio_Fotonico_n24.jpg" itemprop="thumbnail" alt="Image description" />
+							</a>
+							<!-- <figcaption itemprop="caption description">Image caption 2</figcaption> -->
+						</figure>
+
+					</div>
+
+					<div class="slide">
+						<!-- <h1>fullPage.js videos</h1> -->
+
+
+						<figure class="find-them-all" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+							<a href="images\Negro_Autonomo_n1.jpg" itemprop="contentUrl" data-size=" 763x1000 " data-index=" 8 ">
+								<img class="slideImg" src="images\Negro_Autonomo_n1.jpg" itemprop="thumbnail" alt="Image description" />
+							</a>
+							<!-- <figcaption itemprop="caption description">Image caption 2</figcaption> -->
+						</figure>
+
+					</div>
+
+					<div class="slide">
+						<!-- <h1>fullPage.js videos</h1> -->
+
+
+						<figure class="find-them-all" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+							<a href="images\Ejercicio_en_Reconstitucion.jpg" itemprop="contentUrl" data-size=" 1460x1000 " data-index=" 9 ">
+								<img class="slideImg" src="images\Ejercicio_en_Reconstitucion.jpg" itemprop="thumbnail" alt="Image description" />
+							</a>
+							<!-- <figcaption itemprop="caption description">Image caption 2</figcaption> -->
+						</figure>
+
+					</div>
+
+					<div class="slide">
+						<!-- <h1>fullPage.js videos</h1> -->
+
+
+						<figure class="find-them-all" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+							<a href="images\Autonomia.jpg" itemprop="contentUrl" data-size=" 1011x1000 " data-index=" 10 ">
+								<img class="slideImg" src="images\Autonomia.jpg" itemprop="thumbnail" alt="Image description" />
+							</a>
+							<!-- <figcaption itemprop="caption description">Image caption 2</figcaption> -->
+						</figure>
+
+					</div>
+					<div class="slide">
+						<!-- <h1>fullPage.js videos</h1> -->
+
+
+						<figure class="find-them-all" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+							<a href="images\Reconstituido_n2.jpg" itemprop="contentUrl" data-size=" 997x1000 " data-index=" 11 ">
+								<img class="slideImg" src="images\Reconstituido_n2.jpg" itemprop="thumbnail" alt="Image description" />
+							</a>
+							<!-- <figcaption itemprop="caption description">Image caption 2</figcaption> -->
+						</figure>
+
+					</div>
+					<div class="slide">
+						<!-- <h1>fullPage.js videos</h1> -->
+
+
+						<figure class="find-them-all" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+							<a href="images\Ejercicio_Fotonico_n16.jpg" itemprop="contentUrl" data-size=" 1008x1000 " data-index=" 12 ">
+								<img class="slideImg" src="images\Ejercicio_Fotonico_n16.jpg" itemprop="thumbnail" alt="Image description" />
+							</a>
+							<!-- <figcaption itemprop="caption description">Image caption 2</figcaption> -->
+						</figure>
+
+					</div>
+					<div class="slide">
+						<!-- <h1>fullPage.js videos</h1> -->
+
+
+						<figure class="find-them-all" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+							<a href="images\Experimento_Ferrico.jpg" itemprop="contentUrl" data-size=" 909x1000 " data-index=" 12 ">
+								<img class="slideImg" src="images\Experimento_Ferrico.jpg" itemprop="thumbnail" alt="Image description" />
+							</a>
+							<!-- <figcaption itemprop="caption description">Image caption 2</figcaption> -->
+						</figure>
+
+					</div>
+					<div class="slide">
+						<!-- <h1>fullPage.js videos</h1> -->
+
+
+						<figure class="find-them-all" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+							<a href="images\Ejercicio_en_Humo_n3.jpg" itemprop="contentUrl" data-size=" 964x1000 " data-index=" 13 ">
+								<img class="slideImg" src="images\Ejercicio_en_Humo_n3.jpg" itemprop="thumbnail" alt="Image description" />
+							</a>
+							<!-- <figcaption itemprop="caption description">Image caption 2</figcaption> -->
+						</figure>
+
+					</div>
+					<div class="slide">
+						<!-- <h1>fullPage.js videos</h1> -->
+
+
+						<figure class="find-them-all" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+							<a href="images\Realizacion.jpg" itemprop="contentUrl" data-size=" 971x1000 " data-index=" 14 ">
+								<img class="slideImg" src="images\Realizacion.jpg" itemprop="thumbnail" alt="Image description" />
+							</a>
+							<!-- <figcaption itemprop="caption description">Image caption 2</figcaption> -->
+						</figure>
+
+					</div>
+					<div class="slide">
+						<!-- <h1>fullPage.js videos</h1> -->
+
+
+						<figure class="find-them-all" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+							<a href="images\Implementacion_de_negro_autonomo_n9.jpg" itemprop="contentUrl" data-size=" 1024x761 " data-index=" 15 ">
+								<img class="slideImg" src="images\Implementacion_de_negro_autonomo_n9.jpg" itemprop="thumbnail" alt="Image description" />
+							</a>
+							<!-- <figcaption itemprop="caption description">Image caption 2</figcaption> -->
+						</figure>
+
+					</div>
+					<div class="slide">
+						<!-- <h1>fullPage.js videos</h1> -->
+
+
+						<figure class="find-them-all" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+							<a href="images\Reconstituido_n3.jpg" itemprop="contentUrl" data-size=" 982x1000 " data-index=" 16 ">
+								<img class="slideImg" src="images\Reconstituido_n3.jpg" itemprop="thumbnail" alt="Image description" />
+							</a>
+							<!-- <figcaption itemprop="caption description">Image caption 2</figcaption> -->
+						</figure>
+
+					</div>
+					<div class="slide">
+						<!-- <h1>fullPage.js videos</h1> -->
+
+
+						<figure class="find-them-all" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+							<a href="images\Sensibilidad_Carbonica.jpg" itemprop="contentUrl" data-size=" 675x1000 " data-index=" 17 ">
+								<img class="slideImg" src="images\Sensibilidad_Carbonica.jpg" itemprop="thumbnail" alt="Image description" />
+							</a>
+							<!-- <figcaption itemprop="caption description">Image caption 2</figcaption> -->
+						</figure>
+
+					</div>
+					<div class="slide">
+						<!-- <h1>fullPage.js videos</h1> -->
+
+
+						<figure class="find-them-all" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+							<a href="images\Reiteracion_de_Reconstitucion_n1.jpg" itemprop="contentUrl" data-size=" 1536x1000 " data-index=" 18 ">
+								<img class="slideImg" src="images\Reiteracion_de_Reconstitucion_n1.jpg" itemprop="thumbnail" alt="Image description" />
+							</a>
+							<!-- <figcaption itemprop="caption description">Image caption 2</figcaption> -->
+						</figure>
+
+					</div>
+					<div class="slide">
+						<!-- <h1>fullPage.js videos</h1> -->
+
+
+						<figure class="find-them-all" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+							<a href="images\Implementacion_de_Negro_Autonomo.jpg" itemprop="contentUrl" data-size=" 611x1000 " data-index=" 19 ">
+								<img class="slideImg" src="images\Implementacion_de_Negro_Autonomo.jpg" itemprop="thumbnail" alt="Image description" />
+							</a>
+							<!-- <figcaption itemprop="caption description">Image caption 2</figcaption> -->
+						</figure>
+
+					</div>
+					<div class="slide">
+						<!-- <h1>fullPage.js videos</h1> -->
+
+
+						<figure class="find-them-all" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+							<a href="images\Regrecion_y_Confirmacion.jpg" itemprop="contentUrl" data-size=" 635x1000 " data-index=" 20 ">
+								<img class="slideImg" src="images\Regrecion_y_Confirmacion.jpg" itemprop="thumbnail" alt="Image description" />
+							</a>
+							<!-- <figcaption itemprop="caption description">Image caption 2</figcaption> -->
+						</figure>
+
+					</div>
+					<div class="slide">
+						<!-- <h1>fullPage.js videos</h1> -->
+
+
+						<figure class="find-them-all" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+							<a href="images\Redencion_Fotonica.jpg" itemprop="contentUrl" data-size=" 908x1000 " data-index=" 21 ">
+								<img class="slideImg" src="images\Redencion_Fotonica.jpg" itemprop="thumbnail" alt="Image description" />
+							</a>
+							<!-- <figcaption itemprop="caption description">Image caption 2</figcaption> -->
+						</figure>
+
+					</div>
+					<div class="slide">
+						<!-- <h1>fullPage.js videos</h1> -->
+
+
+						<figure class="find-them-all" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+							<a href="images\Comprension.jpg" itemprop="contentUrl" data-size=" 685x1000 " data-index=" 22 ">
+								<img class="slideImg" src="images\Comprension.jpg" itemprop="thumbnail" alt="Image description" />
+							</a>
+							<!-- <figcaption itemprop="caption description">Image caption 2</figcaption> -->
+						</figure>
+
+					</div>
+					<div class="slide">
+						<!-- <h1>fullPage.js videos</h1> -->
+
+
+						<figure class="find-them-all" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+							<a href="images\Reiteracion_de_Reconstitucion_n3.jpg" itemprop="contentUrl" data-size=" 689x1000 " data-index=" 23 ">
+								<img class="slideImg" src="images\Reiteracion_de_Reconstitucion_n3.jpg" itemprop="thumbnail" alt="Image description" />
+							</a>
+							<!-- <figcaption itemprop="caption description">Image caption 2</figcaption> -->
+						</figure>
+
+					</div>
+					<div class="slide">
+						<!-- <h1>fullPage.js videos</h1> -->
+
+
+						<figure class="find-them-all" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+							<a href="images\Ejercicio_en_Negro_Autonomo_n3.jpg" itemprop="contentUrl" data-size=" 848x1000 " data-index=" 24 ">
+								<img class="slideImg" src="images\Ejercicio_en_Negro_Autonomo_n3.jpg" itemprop="thumbnail" alt="Image description" />
+							</a>
+							<!-- <figcaption itemprop="caption description">Image caption 2</figcaption> -->
+						</figure>
+
+					</div>
+					<div class="slide">
+						<!-- <h1>fullPage.js videos</h1> -->
+
+
+						<figure class="find-them-all" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+							<a href="images\Ejercicio_Votaico_n4.jpg" itemprop="contentUrl" data-size=" 794x1000 " data-index=" 25 ">
+								<img class="slideImg" src="images\Ejercicio_Votaico_n4.jpg" itemprop="thumbnail" alt="Image description" />
+							</a>
+							<!-- <figcaption itemprop="caption description">Image caption 2</figcaption> -->
+						</figure>
+
+					</div>
+					<div class="slide">
+						<!-- <h1>fullPage.js videos</h1> -->
+
+
+						<figure class="find-them-all" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+							<a href="images\Ejercicio_Voltaico_n8.jpg" itemprop="contentUrl" data-size=" 971x1000 " data-index=" 26 ">
+								<img class="slideImg" src="images\Ejercicio_Voltaico_n8.jpg" itemprop="thumbnail" alt="Image description" />
+							</a>
+							<!-- <figcaption itemprop="caption description">Image caption 2</figcaption> -->
+						</figure>
+
+					</div>
+
+				</div>
+			</div>
+
+
+			<div class="section">
+
+				<div class="slide" id="slide1">
+					<div class="marginDiv">
+						<iframe src="https://player.vimeo.com/video/194909844?byline=0&portrait=0" width="960" height="540" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+					</div>
+				</div>
+				<div class="slide" id="slide2">
+					<div class="marginDiv">
+						<iframe src="https://player.vimeo.com/video/192050963?byline=0&portrait=0" width="960" height="540" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+					</div>
+				</div>
+				<div class="slide" id="slide3">
+					<div class="marginDiv">
+						<iframe src="https://player.vimeo.com/video/194909786?byline=0&portrait=0" width="960" height="540" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+					</div>
+				</div>
+			</div>
+
+			<!-- <div class="section">
+				<div class="slide">
+					<img class="slideImg" src="images/_placeHolder.jpg" width="500" height="500"></img>
+
+				</div>
+				<div class="slide">
+					<img class="slideImg" src="images/_placeHolder.jpg" width="500" height="500"></img>
+
+				</div>
+			</div> -->
+
+			<div class="section">
+				<div class="inSlide">
+					<div class="text">
+						<!-- <h1 style="letter-spacing: 2px; margin-bottom: 5vh"> ME </h1> -->
+						<img src="assets\logo.png" style="width:100px;align-items: center;"/>
+						<p> </p>
+						<p> <span>At</span> the intersection of art, design and technology is where I find myself.</p>
+						<p>Working and building between these disciplines, I am both at home and estranged from each. I have had to rely on my own investigation to expand my knowledge and skills. Emerging from the combination of these subjects, my work has come to be the sum of techniques I have invented and tools of my own creation.</p>
+						<p>My explorations have been proto-scientific, guided by aesthetics, and fueled by discovery. Thriving from experimentation and evolution, I constantly search for knowledge and skills that serve my work and a further repurposing, reshaping and recombining of elements in art, design, and technology.</p>
+						<p>The estrangement from the subjects I work within stems from the fact that my work is seen as foreign by each. Artists see it as overly aesthetic and technical, by designers it’s seen as impractical, by scientists as overly artistic, and from an institutional perspective, it's simply too dangerous. despite these considerations, my drive to further develop and experiment has not diminished. I find myself obliged by my various fascinations to delve deeper into the chasm that exists between art, design, and technology, and find new ways to amalgamate the three.</p>
+						<p></p>
+						<!-- <p> Email: jayden@alprola.com</p> -->
+
+					</div>
+				</div>
+			</div>
+			<div class="section">
+				<div class="inSlide">
+					<div class="text">
+						<!-- <h1 style="letter-spacing: 2px; margin-bottom: 5vh">CONFLAGRATIONS </h1> -->
+						<!-- <img src="assets\conflagrations.svg" style="height:1.25em; margin-bottom: 1vh;">
+						<p>The driving force behind my work began with heat, with the phenomenon of an ember slowly consuming the paper it traveled through. This drove my exploration to find different ways to manifest, control, and celebrate the nature of such elements. Heat
+							led to fire, fire to electricity, electricity to light. Within these techniques, as well as the resulting pieces, certain properties manifest which reflect those of the modern world; properties repurposed and represented in a new form.</p>
+						<p>I have focused on employing and celebrating the autonomy and reactivity of the materials I use. The generative nature of the techniques grants the work a degree of independence, as they are not solely created by my intent, but come into being as
+							a collaboration between myself and the properties of the medium. Beyond that, the methods used grant my practice a certain independence from typical materials and established knowledge, which untethers the work from traditional approaches.</p>
+						<p>Turning to science and technology as sources of inspiration and for the development of techniques has been crucial to the work. Utilizing the potential energy of substances, the intricacies and subtleties present in the pieces can be created with
+							a swiftness and elegance unobtainable by classical means. Furthermore, the immediacy and ever changing variables inherent in my practice permits for a rapid evolution, maintaining the work in constant flux; with every iteration refining, improving
+							and occasionally fundamentally altering the procedures that create them.</p>
+						<p>Through these processes, commonalities emerge with the modern world. The use of petroleum and electricity; the importance of immediacy and efficiency; a fixation on action and the energetic alongside the appreciation of the serene and elegant; the
+							friction between the organic and spontaneous, and the synthetic and mechanical. Through the techniques employed these properties are harmonized and imbued in the work by transforming the materials from their hazardous energetic state into a stable
+							memento of action.</p> -->
+
+						<p><span>The</span> methods I explore first began with pyrography. Heat and combustion revealed the potential of using active and reactive elements in my work. Pyrography was what first led me to experiment with other forms of combustion. Beginning with pulverized match heads, then gunpowder, I ended up creating my own deflagrative compounds. This led to experimentation with liquids: alcohol, petroleum compounds, and most importantly, refuse solvents containing dissolved pigments from other artists.</p>
+							<p>The next phase of technical evolution was the use of electricity. The emergence of the technique began by drawing small electric arcs from the confines of a plasma globe. Soon it expanded to the construction of Tesla coils and Marx generators, machines capable of generating hundreds of thousands of volts. The chaotic and fractal effects extracted from electricity paired seamlessly with the work done with fire. The interest I took in electricity fueled my affinity for technical and scientific subjects, which set the stage for the explorations that followed.</p>
+							<p>Having employed the intensity and chaos of fire and electricity the next step seemed to call for a strong contrast, a contrast that would nonetheless maintain the underlying character of the previous techniques. Computerized Numerical Control was the answer. I began experimentation by etching with an ultraviolet laser mounted on a Cartesian plotter. This approach allowed for the incorporation of algorithmically generated designs into the work. Antithetical to previous approaches, this new technique, one of logic and precision, still remained in the same vein as my prior work: I coordinate the broad strokes, the big picture, then my methods, machines, chemicals, and the reactions therein take care of the details. Note the progression to seemingly higher orders of energy, from fire to electricity to light.</p>
+							<p>Due to my vicariance from art, design, and technology, my work diverged from any one discipline. As such, the techniques I have developed, by their own nature, stand as compelling views into the relationship between technology, nature, control and beauty.</p>
+
+						<p style="text-align: right; font-size: 80%;">-jayden romay</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="section">
+				<div class="inSlide">
+					<div class="text">
+						<h1 style="letter-spacing: 2px; margin-bottom: 5vh">CV </h1>
+						<p>2015-16: Conflagraciones. Exhibit at the cultural center El Nigromante, INBA, San Migue de Allende Gto.</p>
+						<p></p>
+						<p>2014 : Border Crossings. Joint show, part of the Chicago Expo: 2014, curated by Margarita Failoni.</p>
+						<p></p>
+						<p>2013 : Art department exhibit of the Austin Community College, Austin, Texas. Winner of "Best in Show" award.</p>
+						<p></p>
+						<p>2010 : The Artists of San Miguel, Mexico On the Road. Joint show in various establishments, New Braunfels, Texas.</p>
+						<p></p>
+						<p>2008 : Phoenix Rises. First solo show in the Atelier gallery, Fábrica Aurora, San Migue de Allende Gto.</p>
+						<p></p>
+						<p>2006 : Arte en Papel. Joint show in the Le Noir gallery, San Miguel de Allende.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="section">
+				<div class="inSlide">
+					<!-- <div class="text"> -->
+					<!-- <h1 style="letter-spacing: 2px; margin-bottom: 5vh">contact me: </h1> -->
+					<h2>jayden@alprola.com</h2>
+					<p></p>
+					<h2><a href="https://jaydenrre.tumblr.com/">How I spend my time. </a></h2>
+					<!-- </div> -->
 				</div>
 			</div>
 
 		</div>
-		<div class="section">
-			<div class="slide" id="slide1">
-				<div class="inSlide"> <img src="images\Progreso.jpg" id="img" />
-					<div> Progress </div>
+		<!-- Root element of PhotoSwipe. Must have class pswp. -->
+		<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+			<!-- Background of PhotoSwipe.
+	         It's a separate element, as animating opacity is faster than rgba(). -->
+			<div class="pswp__bg"></div>
+
+			<!-- Slides wrapper with overflow:hidden. -->
+			<div class="pswp__scroll-wrap">
+
+				<!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+				<!-- don't modify these 3 pswp__item elements, data is added later on. -->
+				<div class="pswp__container">
+					<div class="pswp__item"></div>
+					<div class="pswp__item"></div>
+					<div class="pswp__item"></div>
+				</div>
+
+				<!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+				<div class="pswp__ui pswp__ui--hidden">
+
+					<div class="pswp__top-bar">
+
+						<!--  Controls are self-explanatory. Order can be changed. -->
+
+						<div class="pswp__counter"></div>
+
+						<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+						<button class="pswp__button pswp__button--share" title="Share"></button>
+
+						<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+						<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+						<!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+						<!-- element will get class pswp__preloader-active when preloader is running -->
+						<div class="pswp__preloader">
+							<div class="pswp__preloader__icn">
+								<div class="pswp__preloader__cut">
+									<div class="pswp__preloader__donut"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+						<div class="pswp__share-tooltip"></div>
+					</div>
+
+					<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+	            </button>
+
+					<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+	            </button>
+
+					<div class="pswp__caption">
+						<div class="pswp__caption__center"></div>
+					</div>
 
 				</div>
+
 			</div>
 
-			<div class="slide">
-				<div class="inSlide"> <img src="images\Concesion.jpg" />
-					<div>Concesion</div>
-
-				</div>
-			</div>
-
-
-			<div class="slide">
-				<div class="inSlide">
-					<img src="images\Contencion_y_Contraste.jpg" />
-					<div>Contencion Y Contraste</div>
-				</div>
-			</div>
-
-			<div class="slide">
-				<div class="inSlide">
-					<img src="images\Ejercicio_en_Negro_Autonomo_n6.jpg" />
-					<div>Ejercicio En Negro Autonomo N6</div>
-				</div>
-			</div>
-
-			<div class="slide">
-				<div class="inSlide">
-					<img src="images\Reconstituido_n1.jpg" />
-					<div>Reconstituido N1</div>
-				</div>
-			</div>
-
-			<div class="slide">
-				<div class="inSlide">
-					<img src="images\Aseguramiento.jpg" />
-					<div>Aseguramiento</div>
-				</div>
-			</div>
-
-			<div class="slide">
-				<div class="inSlide">
-					<img src="images\Reiteracion_de_Reconstitucion_n2.jpg" />
-					<div>Reiteracion De Reconstitucion N2</div>
-				</div>
-			</div>
-
-			<div class="slide">
-				<div class="inSlide">
-					<img src="images\Ejercisio_Fotonico_n24.jpg" />
-					<div>Ejercisio Fotonico N24</div>
-				</div>
-			</div>
-
-			<div class="slide">
-				<div class="inSlide">
-					<img src="images\Negro_Autonomo_n1.jpg" />
-					<div>Negro Autonomo N1</div>
-				</div>
-			</div>
-
-			<div class="slide">
-				<div class="inSlide">
-					<img src="images\Ejercicio_en_Reconstitucion.jpg" />
-					<div>Ejercicio En Reconstitucion</div>
-				</div>
-			</div>
-
-			<div class="slide">
-				<div class="inSlide">
-					<img src="images\Autonomia.jpg" />
-					<div>Autonomia</div>
-				</div>
-			</div>
-
-			<div class="slide">
-				<div class="inSlide">
-					<img src="images\Reconstituido_n2.jpg" />
-					<div>Reconstituido N2</div>
-				</div>
-			</div>
-
-			<div class="slide">
-				<div class="inSlide">
-					<img src="images\Ejercicio_Fotonico_n16.jpg" />
-					<div>Ejercicio Fotonico N16</div>
-				</div>
-			</div>
-
-			<div class="slide">
-				<div class="inSlide">
-					<img src="images\Experimento_Ferrico.jpg" />
-					<div>Experimento Ferrico</div>
-				</div>
-			</div>
-
-			<div class="slide">
-				<div class="inSlide">
-					<img src="images\Ejercicio_en_Humo_n3.jpg" />
-					<div>Ejercicio En Humo N3</div>
-				</div>
-			</div>
-
-			<div class="slide">
-				<div class="inSlide">
-					<img src="images\Realizacion.jpg" />
-					<div>Realizacion</div>
-				</div>
-			</div>
-
-			<div class="slide">
-				<div class="inSlide">
-					<img src="images\Implementacion_de_negro_autonomo_n9.jpg" />
-					<div>Implementacion De Negro Autonomo N9</div>
-				</div>
-			</div>
-
-			<div class="slide">
-				<div class="inSlide">
-					<img src="images\Reconstituido_n3.jpg" />
-					<div>Reconstituido N3</div>
-				</div>
-			</div>
-
-			<div class="slide">
-				<div class="inSlide">
-					<img src="images\Sensibilidad_Carbonica.jpg" />
-					<div>Sensibilidad Carbonica</div>
-				</div>
-			</div>
-
-
-			<div class="slide">
-				<div class="inSlide">
-					<img src="images\Reiteracion_de_Reconstitucion_n1.jpg" />
-					<div>Reiteracion De Reconstitucion N1</div>
-				</div>
-			</div>
-
-			<div class="slide">
-				<div class="inSlide">
-					<img src="images\Implementacion_de_Negro_Autonomo.jpg" />
-					<div>Implementacion De Negro Autonomo</div>
-				</div>
-			</div>
-
-			<div class="slide">
-				<div class="inSlide">
-					<img src="images\Regrecion_y_Confirmacion.jpg" />
-					<div>Regrecion Y Confirmacion</div>
-				</div>
-			</div>
-
-			<div class="slide">
-				<div class="inSlide">
-					<img src="images\Redencion_Fotonica.jpg" />
-					<div>Redencion Fotonica</div>
-				</div>
-			</div>
-
-			<div class="slide">
-				<div class="inSlide">
-					<img src="images\Comprension.jpg" />
-					<div>Comprension</div>
-				</div>
-			</div>
-
-			<div class="slide">
-				<div class="inSlide">
-					<img src="images\Reiteracion_de_Reconstitucion_n3.jpg" />
-					<div>Reiteracion De Reconstitucion N3</div>
-				</div>
-			</div>
-
-			<div class="slide">
-				<div class="inSlide">
-					<img src="images\Ejercicio_en_Negro_Autonomo_n3.jpg" />
-					<div>Ejercicio En Negro Autonomo N3</div>
-				</div>
-			</div>
-
-			<div class="slide">
-				<div class="inSlide">
-					<img src="images\Ejercicio_Votaico_n4.jpg" />
-					<div>Ejercicio Votaico N4</div>
-				</div>
-			</div>
-
-			<div class="slide">
-				<div class="inSlide">
-					<img src="images\Ejercicio_Voltaico_n8.jpg" />
-					<div>Ejercicio Voltaico N8</div>
-				</div>
-			</div>
-			<!--bookmark-->
 		</div>
-		<div class="section">
-			<div class="inSlide">
-				<div class="text">
-					<!-- <h1 style="letter-spacing: 2px; margin-bottom: 5vh">CONFLAGRATIONS </h1> -->
-					<img src="assets\conflagrations.svg" style="height:1.25em; margin-bottom: 1vh;" >
-					<p>The driving force behind my work began with heat, with the phenomenon of an ember slowly consuming the paper it traveled through. This drove my exploration to find different ways to manifest, control, and celebrate the nature of such elements. Heat
-						led to fire, fire to electricity, electricity to light. Within these techniques, as well as the resulting pieces, certain properties manifest which reflect those of the modern world; properties repurposed and represented in a new form.</p>
-					<p>I have focused on employing and celebrating the autonomy and reactivity of the materials I use. The generative nature of the techniques grants the work a degree of independence, as they are not solely created by my intent, but come into being as
-						a collaboration between myself and the properties of the medium. Beyond that, the methods used grant my practice a certain independence from typical materials and established knowledge, which untethers the work from traditional approaches.</p>
-					<p>Turning to science and technology as sources of inspiration and for the development of techniques has been crucial to the work. Utilizing the potential energy of substances, the intricacies and subtleties present in the pieces can be created with
-						a swiftness and elegance unobtainable by classical means. Furthermore, the immediacy and ever changing variables inherent in my practice permits for a rapid evolution, maintaining the work in constant flux; with every iteration refining, improving
-						and occasionally fundamentally altering the procedures that create them.</p>
-					<p>Through these processes, commonalities emerge with the modern world. The use of petroleum and electricity; the importance of immediacy and efficiency; a fixation on action and the energetic alongside the appreciation of the serene and elegant; the
-						friction between the organic and spontaneous, and the synthetic and mechanical. Through the techniques employed these properties are harmonized and imbued in the work by transforming the materials from their hazardous energetic state into a stable
-						memento of action.</p>
-					<p style="text-align: right; font-size: 80%;">-jayden romay</p>
-				</div>
-			</div>
-		</div>
+		<script src='photoSwipe/dist/photoswipe.min.js'></script>
+		<script src='photoSwipe/dist/photoswipe-ui-default.min.js'></script>
 
-		<div class="section">
+		<script src="photoSwipe/js/index.js"></script>
 
-			<div class="slide" id="slide1">
-				<div class="marginDiv">
-					<iframe src="https://player.vimeo.com/video/194909844?byline=0&portrait=0" width="960" height="540" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-				</div>
-			</div>
-			<div class="slide" id="slide1">
-				<div class="marginDiv">
-					<iframe src="https://player.vimeo.com/video/192050963?byline=0&portrait=0" width="960" height="540" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-				</div>
-			</div>
-			<div class="slide" id="slide1">
-				<div class="marginDiv">
-					<iframe src="https://player.vimeo.com/video/194909786?byline=0&portrait=0" width="960" height="540" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+	</body>
 
-				</div>
-			</div>
-		</div>
+</html>
 
-		<div class="section">
-			<div class="inSlide">
-				<div class="text">
-					<h1 style="letter-spacing: 2px; margin-bottom: 5vh">Past Exhibits </h1>
-					<p>2015-16: Conflagraciones. Exhibit at the cultural center El Nigromante, INBA, San Migue de Allende Gto.</p>
-					<p></p>
-					<p>2014 : Border Crossings. Joint show, part of the Chicago Expo: 2014, curated by Margarita Failoni.</p>
-					<p></p>
-					<p>2013 : Art department exhibit of the Austin Community College, Austin, Texas. Winner of "Best in Show" award.</p>
-					<p></p>
-					<p>2010 : The Artists of San Miguel, Mexico On the Road. Joint show in various establishments, New Braunfels, Texas.</p>
-					<p></p>
-					<p>2008 : Phoenix Rises. First solo show in the Atelier gallery, Fábrica Aurora, San Migue de Allende Gto., curated by Margarita Failoni.</p>
-					<p></p>
-					<p>2006 : Arte en Papel. Joint show in the Le Noir gallery, San Miguel de Allende. Invited by Peter Leventhal.</p>
-				</div>
-			</div>
-		</div>
-	</div>
 </body>
+</div>
 
 </html>
